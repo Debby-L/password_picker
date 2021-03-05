@@ -13,13 +13,14 @@ print ('Welcom to password picker!')
 
 #加入迴圈多次產生密碼
 while True:
-    adjective = random.choice(adjectives)
-    noun = random.choice(nouns)
-    number = random.randrange(0, 100)
-    special_char = random.choice(string.punctuation)
+    for num in range(3): #for迴圈指定執行三次程式碼，一次產生三個不同密碼
+        adjective = random.choice(adjectives)
+        noun = random.choice(nouns)
+        number = random.randrange(0, 100)
+        special_char = random.choice(string.punctuation)
     
-    password = adjective + noun +str(number) + special_char
-    print ('Your new password is: %s' % password)
+        password = adjective + noun +str(number) + special_char
+        print ('Your new password is: %s' % password)
 
 #詢問使用者是否需要更新密碼
     response = input('Would you like another password? Type y or n: ')
